@@ -4,7 +4,7 @@
 
 .PHONY: dev nv-blob sim-image list-non-nv-modules
 
-dev: droidcore target-files-package
+dev: droidcore u-boot target-files-package
 ifeq ($(BOARD_SUPPORT_SIMULATION),true)
 	device/nvidia/common/generate_nvtest_ramdisk.sh $(TARGET_DEVICE)
 	device/nvidia/common/generate_full_filesystem.sh $(TARGET_DEVICE)
